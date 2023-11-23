@@ -1,0 +1,22 @@
+[
+     {
+          "name": "Sonja Gorin",
+          "email": "sonjaljatkovic@gmail.com",
+          "password": "CarletonUCoding"
+     },
+     {
+          "name": "Jacob Fournier-Martin",
+          "email": "jake66martin@hotmail.com",
+          "password": "CarletonUCoding"
+     },
+     {
+          "name": "Gustavo Miller",
+          "email": "gustavo.miller@miller-hs.com",
+          "password": "CarletonUCoding"
+     },
+     {
+          "name": "Gurneesh Singh",
+          "email": "gurneesh@carleton.com",
+          "password": "CarletonUCoding"          
+     }
+]

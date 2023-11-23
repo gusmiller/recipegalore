@@ -1,0 +1,273 @@
+/*******************************************************************
+ * Carleton Bootcamp - 2023
+ * Copyright 2023 Sonja Gorin, Jacob Martin, Gustavo Miller
+ * Licensed under MIT
+ * 
+ * Group Project #2 MVC/Express.js
+ * Cravings
+ * 
+ * Date : 11/14/2023 5:50:29 PM
+ *******************************************************************/
+
+/*--------------------------------------------------------------
+# General stylings
+--------------------------------------------------------------*/
+body {
+     font-family: "Open Sans", sans-serif;
+     color: #777;
+}
+
+a {
+     text-decoration: none;
+     color: #43aea0;
+}
+
+a:hover {
+     color: #00d3b8;
+     text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-primary {
+     font-family: "Lato", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+     padding: 30px 0;
+}
+
+.section-bg {
+     background-color: #f2f9f8;
+}
+
+.section-title {
+     text-align: center;
+     padding-bottom: 30px;
+}
+
+.section-title h2 {
+     font-size: 32px;
+     font-weight: 300;
+     margin-bottom: 20px;
+     padding-bottom: 0;
+     color: #555;
+}
+
+.section-title p {
+     margin-bottom: 0;
+}
+
+.logo-navbar-cravings {
+     color: #fff;
+     margin: 25px;
+     font-size: 32px;
+     font-weight: 700;
+     letter-spacing: 1px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu (Desktop Navigation )
+--------------------------------------------------------------*/
+.navbar {
+     padding: 0;
+}
+
+.navbar ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     list-style: none;
+     align-items: start;
+}
+
+.navbar li {
+     position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px 0 10px 30px;
+     font-family: "Open Sans", sans-serif;
+     font-size: 18px;
+     color: #d2ece9;
+     white-space: nowrap;
+     transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+     font-size: 12px;
+     line-height: 0;
+     margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+     color: #fff;
+}
+
+.login-form {
+     width: 90%;
+     margin-left: auto !important;
+}
+
+/*--------------------------------------------------------------
+* Cravings custom stylings
+--------------------------------------------------------------*/
+.category-view {
+     font-size: calc(1.1rem + 0.3vw);
+     font-weight: 500;
+     line-height: 1.2;
+}
+
+.noleft {
+     padding-left: 0px;
+}
+
+@media (min-width: 1025px) {
+     .h-custom-2 {
+          height: 100%;
+     }
+}
+
+.carleton-image {
+     object-fit: cover;
+     object-position: left;
+     margin-right: 500px;
+}
+
+.carleton-image .image-small {
+     width: 150px;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#recipehome {
+     width: 100%;
+     height: 90vh;
+     background: url("../images/hero-background-dish.jpg") top center;
+     background-size: cover;
+     position: relative;
+     margin-bottom: -80px;
+}
+
+#hero {
+     width: 100%;
+     height: 90vh;
+     background: url("../images/hero-background-dish.jpg") top center;
+     background-size: cover;
+     position: relative;
+     margin-bottom: -80px;
+}
+
+#hero:before {
+     content: "";
+     background: rgba(56, 67, 65, 0.85);
+     position: absolute;
+     bottom: 0;
+     top: 0;
+     left: 0;
+     right: 0;
+}
+
+#hero .hero-container {
+     margin: 10px;
+     position: absolute;
+     bottom: 0;
+     top: 0;
+     left: 0;
+     right: 0;
+     display: flex;
+     padding-top: 80px;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+}
+
+#hero h1 {
+     margin: 0 0 10px 0;
+     font-size: 48px;
+     font-weight: 300;
+     line-height: 56px;
+     color: #fff;
+}
+
+#hero h2 {
+     color: #eee;
+     margin-bottom: 50px;
+     font-size: 20px;
+     font-weight: 300;
+}
+
+#hero .btn-get-started {
+     font-family: "Lato", sans-serif;
+     font-weight: 400;
+     font-size: 16px;
+     letter-spacing: 1px;
+     display: inline-block;
+     padding: 8px 28px 10px 28px;
+     border-radius: 50px;
+     transition: 0.5s;
+     border: 1px solid #fff;
+     color: #fff;
+}
+
+#hero .btn-get-started:hover {
+     background: #fff;
+     color: #70b9b0;
+     border: 1px solid #70b9b0;
+}
+
+@media (min-width: 1024px) {
+     #hero {
+          background-attachment: fixed;
+     }
+}
+
+@media (max-width: 768px) {
+     #hero h1 {
+          font-size: 28px;
+          line-height: 36px;
+     }
+
+     #hero h2 {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 30px;
+     }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+     background: #842029;
+     padding: 10px 0;
+     color: #fff;
+     font-size: 14px;
+}
+
+#footer .copyright {
+     text-align: center;
+}
+
+#footer .credits {
+     padding-top: 10px;
+     text-align: center;
+     font-size: 13px;
+     color: #fff;
+}

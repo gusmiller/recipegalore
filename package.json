@@ -22,6 +22,8 @@
           "figlet": "^1.7.0",
           "mysql2": "^2.2.5",
           "node-notifier": "^10.0.1",
-          "sequelize": "^6.3.5"
+          "sequelize": "^6.3.5",
+          "simplemde": "^1.11.2",
+          "validator": "^13.11.0"
      }
 }

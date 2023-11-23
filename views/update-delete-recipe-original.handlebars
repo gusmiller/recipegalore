@@ -1,0 +1,49 @@
+<section class="edit-recipe-card">
+    <h3 id="edit-recipe-title">Edit Recipe</h3>
+    <form class="edit-recipe-form">
+
+        <select id="category-id">
+            <option value={{ recipe.category.id }}>{{ recipe.category.name }}</option>
+            {{#each categories as |category|}}
+            <option value={{ category.id }}>{{ category.name }}</option>
+            {{/each}}
+        </select>
+
+        <label id="recipe-name-label" for="edit-recipe-name">Recipe Name</label>
+        <input type="text" id="edit-recipe-name-input" name="edit-recipe-name" value="{{ recipe.name }}"/>
+
+        <h4>Ingredients</h4>
+
+        <label for="edit-recipe-ingredient">Ingredients</label>
+        <label for="edit-ingredient-measurement">Measurement</label>
+        <label for="edit-measurement-unit">Unit</label>
+
+        <section class="ingredients-section">
+            {{#each recipe.ingredients as |ingredient| }}
+                <div>
+                    <input value="{{ ingredient.ingredient }}" />
+                    <input value="{{ ingredient.measurement }}" />
+                    <input value="{{ ingredient.unit }}" />
+                </div>
+            {{/each}}
+        </section>
+        
+        <section class="ingredients-inputs-section">
+            <div class="edit-ingredient">
+                <input type="text" class="edit-ingredient-name-value" id="add-ingredient-name-input" name="add-ingredient-name"/>
+                <input type="text" class="edit-ingredient-measurement-value" id="add-ingredient-measurement-input" name="add-ingredient-measurement"/>
+                <input type="text" class="edit-measurement-unit-value" id="add-measurement-unit-input" name="add-measurement-unit"/>
+                <button type="button" id="add-ingredient-button">+</button>
+            </div>
+        </section>
+
+        <label id="instructions-label" for="edit-recipe-instructions">Preparation Instructions</label>
+        <textarea id="edit-post-content-input" name="edit-post-content">{{{ recipe.instructions }}}</textarea>
+
+        <button id="update-button" type="submit">Update Recipe</button>
+        <button id="delete-button" type="submit">Delete Recipe</button>
+    </form>
+</section>
+
+<script src="/js/update-recipe.js"></script>
+<script src="/js/delete-recipe.js"></script>

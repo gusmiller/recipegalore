@@ -1,0 +1,57 @@
+{{log origin_call}}
+<section class="h-75">
+
+     <div class="container">
+          <div class="row">
+               <h2 class="fw-normal mb-3" style="letter-spacing: 1px;">{{ recipe.name }}</h2>
+          </div>
+          
+          <div class="row"> <!-- Category row -->
+               <div class="col-md-6 text-black">
+                    <div class="mb-3">
+                         <label class="form-label">Category Name: <span class="category-view">{{ recipe.category.name }}</span> </label>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Section Ingredients -->
+          <div class="row">
+               <div class="col-8 text-black">
+                    <table class="table table-responsive">
+                         <thead>
+                              <tr>
+                                   <th scope="col">Ingredient Name</th>
+                                   <th scope="col">Measurement</th>
+                                   <th scope="col">Unit</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              {{#each recipe.ingredients as |ingredient| }}
+                              <tr id="item{{ingredient.id}}">
+                                   <td>{{ingredient.ingredient}}</td>
+                                   <td>{{ingredient.measurement}}</td>
+                                   <td>{{ingredient.unit}}</td>
+                              </tr>
+                              {{/each}}
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+
+          <!-- Section Preparations -->
+          <div class="row mt-3 mb-5">
+               <div class="col-md-10">
+                    <label for="preparation" class="form-label"><strong>Preparation Instructions</strong></label>
+                    <p>{{ recipe.instructions }}</p>
+                    {{#if isEditable}} <!-- Prevent when not owner -->
+                    <a href="/edit/{{recipe.id}}"  id="edit-button" class="btn mr-1 mt-1" style="background-color: #842029;color:white;width:150px"><i
+                              class="bi bi-apple"></i> Edit</a>
+                    {{/if}}
+                    <a class="btn btn-dark mr-1 mt-1" style="width:150px" href="/{{origin_call}}"><i class="bi bi-door-open"></i>Go Back</a>
+               </div>
+
+          </div>
+
+     </div>
+
+</section>

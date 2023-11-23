@@ -1,0 +1,51 @@
+{{log origin_call}}
+<section class="h-75">
+     <div class="container-fluid">
+
+          <!-- Sort by Category / Member -->
+          <div class="row">
+               <div class="col-xs-6 col-md-3 col-xl-2 text-black mb-2">
+                    <select id="categorylist" class="h-custom-2 ms-xl-4 form-select form-control-lg"
+                         aria-label="Select Article Category">
+                         <option>Filter by Category</option>
+                    </select>
+               </div>
+               {{#if user_all}}
+               <div class="col-xs-6 col-md-3 col-xl-2 text-black mb-2">
+                    <select id="memberslist" class="h-custom-2 ms-xl-4 form-select form-control-lg"
+                         aria-label="Select a member">
+                         <option>Filter by User</option>
+                    </select>
+               </div>
+               {{/if}}
+          </div>
+
+          <!-- List of recipies -->
+          <div class="row justify-content-center">
+               <div class="col-8 text-black">
+                    <table class="table table-responsive">
+                         <thead>
+                              <tr>
+                                   <th scope="col">Name</th>
+                                   <th scope="col">Category</th>
+                                   <th scope="col">Date</th>
+                                   <th scope="col">User</th>
+                              </tr>
+                         </thead>
+                         <tbody>                              
+                              {{#each handlebarData as | item |}}
+                              <tr id="recipeitem_{{item.id}}" data-category="{{item.category_id}}" data-memberid="{{item.user_id}}">
+                                   <td> <a id="viewItem" href="/view/{{item.id}}">{{item.name}}</a></td>
+                                   <td>{{item.category.name}}</td>
+                                   <td>{{dateFormatted item.date_registered}}</td>
+                                   <td>{{item.user.name}}</td>
+                              </tr>
+                              {{/each}}
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+     </div>
+</section>
+
+<script src="/js/filter.js"></script>

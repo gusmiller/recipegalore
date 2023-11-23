@@ -13,7 +13,6 @@ const Category = require("./category");
 const Recipe = require("./recipe");
 const Ingredients = require("./ingredients");
 
-
 Category.hasMany(Recipe, {
      foreignKey: 'category_id'
      
@@ -22,7 +21,6 @@ Category.hasMany(Recipe, {
 Recipe.belongsTo(Category, {
      foreignKey: "category_id"
 });
-
 
 Users.hasMany(Recipe, {
      foreignKey: "user_id"
@@ -35,11 +33,8 @@ Recipe.belongsTo(Users, {
 
 // https://sequelize.org/docs/v6/advanced-association-concepts/creating-with-associations/
 Recipe.Ingredients = Recipe.hasMany(Ingredients,{
-
      foreignKey: "recipe_id",
      onDelete: 'CASCADE'
-
-
 })
 
 module.exports = { Users, Category, Recipe, Ingredients };

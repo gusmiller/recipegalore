@@ -37,7 +37,7 @@
                               <tr id="recipeitem_{{item.id}}" data-category="{{item.category_id}}" data-memberid="{{item.user_id}}">
                                    <td> <a id="viewItem" href="/view/{{item.id}}">{{item.name}}</a></td>
                                    <td>{{item.category.name}}</td>
-                                   <td>{{dateFormatted item.date_registered}}</td>
+                                   <td>{{ item.date_registered}}</td>
                                    <td>{{item.user.name}}</td>
                               </tr>
                               {{/each}}

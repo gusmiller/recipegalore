@@ -35,11 +35,8 @@ Recipe.belongsTo(Users, {
 
 // https://sequelize.org/docs/v6/advanced-association-concepts/creating-with-associations/
 Recipe.Ingredients = Recipe.hasMany(Ingredients,{
-
      foreignKey: "recipe_id",
      onDelete: 'CASCADE'
-
-
 })
 
 module.exports = { Users, Category, Recipe, Ingredients };
